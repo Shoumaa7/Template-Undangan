@@ -1,0 +1,674 @@
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.appear {
+  animation: appear ease-in-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+:root {
+  --primary: #d36784;
+
+  --font-xs: 14px; 
+  --font-sm: 16px;
+  --font-base: 18px;
+  --font-lg: 20px
+  --font-xl: 24px;
+  --font-2xl: 30px;
+  --font-3xl: 36px;
+  --font-4xl: 48px; 
+  --font-5xl: 60px;
+  --font-6xl: 72px;
+
+  --display-sm: 80px;
+  --display-lg: 100px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Gowun Batang", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.gowunbatang-reg {
+  font-family: "Gowun Batang", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.gowunbatang-bold {
+  font-family: "Gowun Batang", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+html,
+body {
+  overflow: hidden;
+}
+
+body {
+  background-color: rgba(126, 0, 76, 0.843);
+  display: flex;
+  justify-content: left;
+}
+
+.moon-button {
+  position: fixed;
+  right: 30px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary);
+  border: none;
+  cursor: pointer;
+  background-image: url("../Aset/Icon/pause-fill.svg");
+  background-size: contain;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+.moon-button:hover {
+  transform: scale(1.1);
+}
+
+.moon-button.playing {
+  background-image: url("../Aset/Icon/pause-fill.svg");
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.moon-button.paused {
+  background-image: url("../Aset/Icon/play-fill.svg");
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#sectionKecil {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  /* overflow-y: scroll;
+  overflow-x: hidden; */
+  transition: all 1s ease-in-out;
+}
+
+.scrollon {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.scrolloff {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.displayon {
+  display: inline;
+}
+
+.displayoff {
+  display: none;
+}
+
+.open {
+  cursor: pointer;
+  padding: 3% 7%;
+  background-color: var(--primary);
+  border: 2px solid white;
+  font-size: 20px;
+  border-radius: 10px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.pengantin {
+  padding: 3px;
+  width: 260px;
+  height: 260px;
+  margin-bottom: 15px;
+  border: 4px solid var(--primary);
+  border-radius: 50px;
+  animation: fade-in 800ms ease-in-out;
+  z-index: 2;
+}
+
+.cover {
+  background-image: url(../Aset/Gambar/bg\ bunga.png);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 60% 0;
+  position: relative;
+  z-index: 0;
+}
+
+.cover p {
+  color: var(--primary);
+  font-size: var(--font-lg);
+  animation: fade-in 800ms ease-in-out;
+}
+
+.cover h1 {
+  color: var(--primary);
+  font-size: var(--font-5xl);
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin: 10px 0;
+  animation: fade-in 800ms ease-in-out;
+}
+
+.cover div {
+  margin-bottom: 20px;
+  font-size: var(--font-base);
+  animation: fade-in 800ms ease-in-out;
+  color: var(--primary);
+}
+
+.ayat {
+  background-color: #ac2d4f;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 25px;
+}
+
+.ayat p.judul {
+  margin: 30px 0;
+  padding-bottom: 5px;
+  width: 70%;
+  font-size: var(--font-lg);
+  border-bottom: 3px solid white;
+  border-radius: 5px;
+}
+
+.ayat .arab {
+  margin-bottom: 25px;
+  font-size: var(--font-xl);
+}
+
+.ayat .translation {
+  margin-bottom: 20px;
+  font-size: var(--font-lg);
+  font-family: sans-serif;
+  font-style: italic;
+}
+
+.mempelai {
+  background-image: url(../Aset/Gambar/bg\ bunga\ 2.png);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: auto;
+  padding: 20% 30px;
+  color: var(--primary);
+}
+
+.mempelai img {
+  width: 250px;
+}
+
+.mempelai p {
+  color: var(--primary);
+  margin-top: 18px;
+  font-size: var(--font-base);
+  font-weight: 700;
+}
+
+.mempelai .desk {
+  font-size: var(--font-base);
+  font-weight: 700;
+}
+
+.pengantin-pria .foto,
+.pengantin-wanita .foto {
+  width: 175px;
+  height: 250px;
+  object-fit: cover;
+  padding: 3px;
+  margin-top: 20px;
+  border-radius: 100px;
+  border: 4px solid var(--primary);
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.pengantin-pria h1,
+.pengantin-wanita h1 {
+  color: var(--primary);
+  font-weight: 700;
+  margin-top: 10px;
+  font-size: var(--font-5xl);
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+.pengantin-pria h3,
+.pengantin-wanita h3 {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: var(--font-xl);
+}
+
+.pengantin-pria p,
+.pengantin-wanita p {
+  margin-top: 10px;
+  font-size: var(--font-base);
+}
+
+.pengantin-pria .ig,
+.pengantin-wanita .ig {
+  cursor: pointer;
+  padding: 3% 5%;
+  background-color: var(--primary);
+  border: 2px solid white;
+  font-size: var(--font-lg);
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.pengantin-pria .instagram,
+.pengantin-wanita .instagram {
+  width: 20px;
+}
+
+.acara {
+  background-color: #ac2d4f;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 25px;
+  width: 100%;
+}
+
+.dan {
+  color: var(--primary);
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: var(--font-4xl);
+  margin: 20px 0;
+}
+
+.akad,
+.resepsi {
+  background-color: white;
+  color: var(--primary);
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+.akad .judul,
+.resepsi .judul {
+  background-color: #f34876;
+  font-size: var(--font-2xl);
+  font-weight: 700;
+  padding: 10px 0;
+}
+
+.akad .tanggal,
+.resepsi .tanggal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.akad .tanggal .angka,
+.resepsi .tanggal .angka {
+  color: var(--primary);
+  font-size: var(--display-lg);
+}
+
+.akad .tanggal .teks,
+.resepsi .tanggal .teks {
+  text-align: start;
+  color: var(--primary);
+  font-size: var(--font-xl);
+  line-height: 30px;
+}
+
+.akad .garis,
+.resepsi .garis {
+  color: var(--primary);
+  font-size: var(--font-3xl);
+  margin-top: -20px;
+}
+
+.akad .Lokasi,
+.resepsi .Lokasi {
+  margin-top: -10px;
+  color: var(--primary);
+  padding-bottom: 10px;
+  font-weight: 700;
+  font-size: var(--font-base);
+}
+
+.countdown {
+  display: inline;
+}
+
+.lokasi {
+  background-image: url(../Aset/Gambar/bg\ bunga\ 2.png);
+  background-size: 390px 100%;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: auto;
+  padding: 19% 30px;
+}
+
+.lokasi h1 {
+  color: var(--primary);
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: var(--font-4xl);
+  margin-bottom: 20px;
+}
+
+.lokasi p {
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: var(--font-lg);
+}
+
+.lokasi .maps {
+  width: 90%;
+  height: 250px;
+  border: 4px solid white;
+  border-radius: 20px;
+}
+
+.lokasi .lihatPeta {
+  color: var(--primary);
+  margin-top: 40px;
+  font-weight: 700;
+  font-size: var(--font-lg);
+  border-top: 3px solid var(--primary);
+  border-bottom: 3px solid var(--primary);
+  border-radius: 15px;
+  padding: 5px 40px;
+  transition: all 500ms ease-in-out;
+}
+
+.lokasi .lihatPeta:hover {
+  background-color: #cc1c4b;
+  color: white;
+  transform: scale(1.1);
+}
+
+.galeri {
+  display: inline;
+}
+
+.rsvp {
+  display: inline;
+}
+
+.hadiah {
+  background-color: #ac2d4f;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 25px;
+  width: 100%;
+}
+
+.hadiah h1 {
+  color: white;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: var(--font-2xl);
+  margin-bottom: 20px;
+}
+
+.hadiah .card {
+  width: 90%;
+  background-color: white;
+  margin-top: 20px;
+  border: 3px solid #ef0f4b;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.hadiah .card .bank {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.hadiah .card .bank p {
+  color: var(--primary);
+  font-weight: 700;
+  text-align: left;
+  font-size: var(--font-base);
+}
+
+.hadiah .card img {
+  width: 100px;
+}
+
+.atau {
+  color: var(--primary);
+  font-size: var(--font-lg);
+  margin: 10px 0;
+}
+
+.penutup {
+  background-image: url(../Aset/Gambar/bg\ bunga\ 2.png);
+  background-size: 100% 100%;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10% 30px;
+}
+
+.penutup p {
+  color: var(--primary);
+  font-size: var(--font-base);
+  margin-bottom: 10px;
+}
+
+.penutup h1 {
+  color: var(--primary);
+  font-size: var(--font-4xl);
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin: 10px 0;
+}
+
+.penutup div {
+  margin-bottom: 20px;
+  font-size: var(--font-base);
+}
+
+.penutup .garis {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: var(--font-3xl);
+}
+
+@media (min-width: 768px) {
+  @keyframes appear {
+    from {
+      opacity: 0;
+      transform: scale(0);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes bunga {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(-5px, 5px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  @keyframes bunga2 {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(5deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  @keyframes bunga3 {
+    0% {
+      transform: translate(0, 0) rotate(-3deg);
+    }
+    50% {
+      transform: translate(-5px, 5px) rotate(3deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(-3deg);
+    }
+  }
+
+  .bunga {
+    position: absolute;
+    width: 600px;
+    pointer-events: none;
+    transform: scaleX(-1);
+    opacity: 0.3;
+    z-index: 1;
+    animation: bunga 5s ease-in-out infinite;
+  }
+  .bawah {
+    bottom: 0;
+    left: 0;
+  }
+  .atas {
+    top: -15px;
+    right: -20px;
+    width: 400px;
+    animation: bunga3 5s ease-in-out infinite;
+    transform-origin: top right;
+  }
+
+  .ranting {
+    bottom: -25px;
+    left: 10px;
+    z-index: 0;
+    animation: bunga 5s ease-in-out infinite, bunga2 5s ease-in-out infinite;
+  }
+
+  #sectionKecil {
+    width: 30vw;
+    border-right: 5px solid #ff86d5;
+    border-left: 5px solid #ff86d5;
+  }
+
+  .pembungkus {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(126, 0, 76, 0.688);
+    width: 100%;
+    height: 100%;
+  }
+
+  .open {
+  padding: 1% 3%;
+}
+
+  .cover {
+    background-size: contain;
+  }
+
+  .cover p {
+    font-size: var(--font-lg);
+  }
+
+  .cover h1 {
+    font-size: var(--font-4xl);
+  }
+
+  .cover div {
+    font-size: var(--font-sm);
+  }
+
+  .open {
+    font-size: var(--font-sm);
+  }
+
+  .mempelai {
+    width: 30vw;
+  }
+
+  .lokasi .maps {
+    width: 26%;
+    height: 200px;
+  }
+
+  .lokasi {
+    background-size: 30% 100%;
+  }
+}

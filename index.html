@@ -182,7 +182,28 @@
 
         <!-- RSVP (Ryan) -->
         <div class="rsvp">
-          <div></div>
+          <div id="rsvp-section">
+            <h1>RSVP Form</h1>
+            <h3>Konfirmasi kehadiran anda!</h3>
+            <form action="php/koneksi.php" method="POST" id="rsvp-form">
+              <label for="nama">Nama :</label>
+              <input type="text" name="nama" required><br><br>
+
+              <label for="email">Email :</label>
+              <input type="email" name="email" required><br><br>
+
+              <label for="kehadiran">Kehandiran :</label>
+              <select name="kehadiran" id="kehadiran">
+                  <option value="hadir">Ya, Saya akan hadir</option>
+                  <option value="tidak-hadir">Maaf, Saya tidak bisa hadir</option>
+              </select> <br><br>
+
+              <button type="submit">Kirim</button>
+            </form>
+            <div id="thanks">
+              <p>✅ Terima kasih sudah mengkonfirmasi kehadiran anda.</p>
+            </div>
+          </div>
         </div>
         <!-- RSVP -->
 
@@ -227,5 +248,6 @@
     <button id="playButton" class="moon-button"></button>
 
     <script src="JS/script.js"></script>
+    <script src="JS/rsvp.js"></script>
   </body>
 </html>

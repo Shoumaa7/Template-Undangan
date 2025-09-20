@@ -451,6 +451,18 @@ body {
 
 .rsvp {
   display: inline;
+  color: black;
+}
+
+#rsvp-form input {
+  color: black;
+}
+
+#thanks {
+  display: none;
+  font-size: 1.2rem;
+  color: rgb(213, 19, 142);
+  margin-top: 20px;
 }
 
 .hadiah {

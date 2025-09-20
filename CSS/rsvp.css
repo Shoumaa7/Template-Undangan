@@ -117,10 +117,12 @@
     font-weight: 600;
     letter-spacing: 1px;
     font-size: 18px;
+    transition: background-color 0.3s ease;
 }
 
 .btn-rsvp:hover {
     cursor: pointer;
+    background-color: #7e1c36;
 }
 
 #thanks {

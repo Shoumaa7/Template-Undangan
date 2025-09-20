@@ -391,6 +391,50 @@ body {
   display: inline;
 }
 
+.galeri-container {
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+  width: 100%;
+  max-width: 32rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-size: cover; 
+  background-position: center; 
+}
+
+.galeri p {
+  padding-top: 40px;
+  color: white;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: var(--font-2xl);
+  margin-bottom: 20px;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 12px;
+  padding: 20px;
+  max-width: 420px; 
+  margin: auto;
+}
+
+.child img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+
 .lokasi {
   background-image: url(../Aset/Gambar/bg\ bunga\ 2.png);
   background-size: 390px 100%;
@@ -447,6 +491,7 @@ body {
 
 .galeri {
   display: inline;
+  background-color: #ac2d4f;
 }
 
 .hadiah {
@@ -667,4 +712,10 @@ body {
   .lokasi .rsvp{
     background-size: 30% 100%;
   }
+  
+  .youtube {
+    width: 360px;
+    height: 315px;
+  }
+
 }

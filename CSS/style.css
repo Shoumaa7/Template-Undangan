@@ -22,7 +22,7 @@
   --font-xs: 14px; 
   --font-sm: 16px;
   --font-base: 18px;
-  --font-lg: 20px
+  --font-lg: 20px;
   --font-xl: 24px;
   --font-2xl: 30px;
   --font-3xl: 36px;
@@ -96,9 +96,9 @@ body {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-.moon-button.paused {
-  background-image: url("../Aset/Icon/play-fill.svg");
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  .moon-button.paused {
+    background-image: url("../Aset/Icon/play-fill.svg");
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 #sectionKecil {
@@ -449,22 +449,6 @@ body {
   display: inline;
 }
 
-.rsvp {
-  display: inline;
-  color: black;
-}
-
-#rsvp-form input {
-  color: black;
-}
-
-#thanks {
-  display: none;
-  font-size: 1.2rem;
-  color: rgb(213, 19, 142);
-  margin-top: 20px;
-}
-
 .hadiah {
   background-color: #ac2d4f;
   display: flex;
@@ -675,12 +659,12 @@ body {
     width: 30vw;
   }
 
-  .lokasi .maps {
+  .lokasi .maps .rsvp {
     width: 26%;
     height: 200px;
   }
 
-  .lokasi {
+  .lokasi .rsvp{
     background-size: 30% 100%;
   }
 }

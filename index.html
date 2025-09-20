@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="CSS/style.css" />
-    <link rel="stylesheet" href="CSS/countdown.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/rsvp.css" />
     <title>Undangan Pernikahan Bayu & Lisa</title>
   </head>
   <body>
@@ -221,24 +221,22 @@
 
         <!-- RSVP (Ryan) -->
         <div class="rsvp">
-          <div id="rsvp-section">
-            <h1>RSVP Form</h1>
-            <h3>Konfirmasi kehadiran anda!</h3>
-            <form action="php/koneksi.php" method="POST" id="rsvp-form">
+          <div class="section-rsvp appear">
+            <h1 class="title-rsvp appear">RSVP Form</h1>
+            <h3 class="subtitle-rsvp appear">Konfirmasi kehadiran Anda!</h3>
+            <form action="php/koneksi.php" method="POST" id="rsvp-form" class="appear">
               <label for="nama">Nama :</label>
-              <input type="text" name="nama" required /><br /><br />
+              <input type="text" name="nama" placeholder="ketik nama Anda" required>
 
               <label for="email">Email :</label>
-              <input type="email" name="email" required /><br /><br />
+              <input type="email" name="email" placeholder="ketik email Anda" required>
 
               <label for="kehadiran">Kehandiran :</label>
               <select name="kehadiran" id="kehadiran">
-                <option value="hadir">Ya, Saya akan hadir</option>
-                <option value="tidak-hadir">Maaf, Saya tidak bisa hadir</option>
+                  <option value="hadir">Ya, Saya akan hadir</option>
+                  <option value="tidak-hadir">Maaf, Saya tidak bisa hadir</option>
               </select>
-              <br /><br />
-
-              <button type="submit">Kirim</button>
+              <button type="submit" class="btn-rsvp">Kirim</button>
             </form>
             <div id="thanks">
               <p>✅ Terima kasih sudah mengkonfirmasi kehadiran anda.</p>

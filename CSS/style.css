@@ -471,7 +471,7 @@ body {
 }
 
 .lokasi .maps {
-  width: 400px;
+  width: 90%;
   height: 250px;
   border: 4px solid white;
   border-radius: 20px;
@@ -646,8 +646,4 @@ body {
     background-size: 30% 100%;
   }
 
-  .youtube {
-    width: 380px;
-    height: 315px;
-  }
 }

@@ -19,6 +19,7 @@ playButton.addEventListener("click", () => {
 });
 
 openButton.addEventListener("click", () => {
+  audio.play();
   section.classList.add("scrollon");
   section.classList.remove("scrolloff");
 

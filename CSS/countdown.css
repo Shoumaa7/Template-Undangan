@@ -7,19 +7,20 @@
 .box {
   background-color: #f34876;
   color: white;
-  padding: 10px 31px;
   border-radius: 8px;
   text-align: center;
   min-width: 70px;
 }
 
 .number {
+  padding: 10px 10px 0px 10px;
   font-size: 1.5rem;
   font-weight: bold;
   display: block;
 }
 
 .label {
+  padding: 0px 10px 10px 10px;
   font-size: 0.9rem;
   margin-top: 5px;
 }

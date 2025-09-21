@@ -14,6 +14,19 @@
     </audio>
     <div class="pembungkus">
       <section id="sectionKecil" class="scrolloff">
+        <div class="animasiBunga">
+          <img src="Aset/Gambar/bunga3.png" alt="bunga" class="bunga atas" />
+          <img
+            src="Aset/Gambar/bunga1.png"
+            alt="bunga"
+            class="bunga bawah utama"
+          />
+          <img
+            src="Aset/Gambar/bunga2.png"
+            alt="bunga"
+            class="bunga bawah ranting"
+          />
+        </div>
         <div class="cover" id="cover">
           <img
             src="Aset/Gambar/Pengantin.jpg"
@@ -193,29 +206,58 @@
 
         <!-- galeri (Rafii) -->
         <div class="galeri">
-          <p>Gallery</p>
+          <p class="appear">Gallery</p>
           <div class="galeri-container">
             <div class="parent">
-                    <div class="child">
-                        <img src="Aset/Gambar/foto galeri 1.png" alt="Gallery Image 1">
-                    </div>
-                    <div class="child">
-                        <img src="Aset/Gambar/foto galeri 2.jpg" alt="Gallery Image 2">
-                    </div>
-                    <div class="child">
-                        <img src="Aset/Gambar/foto galeri 3.jpg" alt="Gallery Image 3">
-                    </div>
-                    <div class="child">
-                        <img src="Aset/Gambar/foto galeri 1.png" alt="Gallery Image 4">
-                    </div>
-                    <div class="child">
-                        <img src="Aset/Gambar/foto galeri 2.jpg" alt="Gallery Image 5">
-                    </div>
-                    <div class="child">
-                        <img src="Aset/Gambar/foto galeri 3.jpg" alt="Gallery Image 6">
-                    </div>
+              <div class="child appear">
+                <img
+                  src="Aset/Gambar/foto galeri 1.png"
+                  alt="Gallery Image 1"
+                />
+              </div>
+              <div class="child appear">
+                <img
+                  src="Aset/Gambar/foto galeri 2.jpg"
+                  alt="Gallery Image 2"
+                />
+              </div>
+              <div class="child appear">
+                <img
+                  src="Aset/Gambar/foto galeri 3.jpg"
+                  alt="Gallery Image 3"
+                />
+              </div>
+              <div class="child appear">
+                <img
+                  src="Aset/Gambar/foto galeri 1.png"
+                  alt="Gallery Image 4"
+                />
+              </div>
+              <div class="child appear">
+                <img
+                  src="Aset/Gambar/foto galeri 2.jpg"
+                  alt="Gallery Image 5"
+                />
+              </div>
+              <div class="child appear">
+                <img
+                  src="Aset/Gambar/foto galeri 3.jpg"
+                  alt="Gallery Image 6"
+                />
+              </div>
             </div>
-            <iframe width="460" height="315" style="border-radius: 16px; padding-bottom: 30px;" src="https://www.youtube.com/embed/ejzDm_1MUTA?si=lhB8nZj8Dv2iMWmu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share " referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="youtube"></iframe>
+            <iframe
+              width="460"
+              height="315"
+              style="border-radius: 16px; padding-bottom: 30px"
+              src="https://www.youtube.com/embed/ejzDm_1MUTA?si=lhB8nZj8Dv2iMWmu"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share "
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+              class="youtube"
+            ></iframe>
           </div>
         </div>
         <!-- galeri -->
@@ -225,17 +267,32 @@
           <div class="section-rsvp appear">
             <h1 class="title-rsvp appear">RSVP Form</h1>
             <h3 class="subtitle-rsvp appear">Konfirmasi kehadiran Anda!</h3>
-            <form action="php/koneksi.php" method="POST" id="rsvp-form" class="appear">
+            <form
+              action="php/koneksi.php"
+              method="POST"
+              id="rsvp-form"
+              class="appear"
+            >
               <label for="nama">Nama :</label>
-              <input type="text" name="nama" placeholder="ketik nama Anda" required>
+              <input
+                type="text"
+                name="nama"
+                placeholder="ketik nama Anda"
+                required
+              />
 
               <label for="email">Email :</label>
-              <input type="email" name="email" placeholder="ketik email Anda" required>
+              <input
+                type="email"
+                name="email"
+                placeholder="ketik email Anda"
+                required
+              />
 
               <label for="kehadiran">Kehandiran :</label>
               <select name="kehadiran" id="kehadiran">
-                  <option value="hadir">Ya, Saya akan hadir</option>
-                  <option value="tidak-hadir">Maaf, Saya tidak bisa hadir</option>
+                <option value="hadir">Ya, Saya akan hadir</option>
+                <option value="tidak-hadir">Maaf, Saya tidak bisa hadir</option>
               </select>
               <button type="submit" class="btn-rsvp">Kirim</button>
             </form>

@@ -19,14 +19,14 @@
 :root {
   --primary: #d36784;
 
-  --font-xs: 14px; 
+  --font-xs: 14px;
   --font-sm: 16px;
   --font-base: 18px;
   --font-lg: 20px;
   --font-xl: 24px;
   --font-2xl: 30px;
   --font-3xl: 36px;
-  --font-4xl: 48px; 
+  --font-4xl: 48px;
   --font-5xl: 60px;
   --font-6xl: 72px;
 
@@ -96,9 +96,9 @@ body {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-  .moon-button.paused {
-    background-image: url("../Aset/Icon/play-fill.svg");
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+.moon-button.paused {
+  background-image: url("../Aset/Icon/play-fill.svg");
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 #sectionKecil {
@@ -108,9 +108,13 @@ body {
   align-items: center;
   width: 100vw;
   height: 100vh;
-  /* overflow-y: scroll;
-  overflow-x: hidden; */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   transition: all 1s ease-in-out;
+}
+
+#sectionKecil::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
 .scrollon {
@@ -142,6 +146,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 10px;
+  z-index: 5;
 }
 
 .pengantin {
@@ -156,7 +161,7 @@ body {
 }
 
 .cover {
-  background-image: url(../Aset/Gambar/bg\ bunga.png);
+  background-image: url(../Aset/Gambar/bg\ bunga\ 0.png);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -201,6 +206,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 20px 25px;
+  z-index: 5;
 }
 
 .ayat p.judul {
@@ -404,8 +410,8 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-size: cover; 
-  background-position: center; 
+  background-size: cover;
+  background-position: center;
 }
 
 .galeri p {
@@ -420,10 +426,10 @@ body {
 
 .parent {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
+  grid-template-columns: repeat(3, 1fr);
   gap: 12px;
   padding: 20px;
-  max-width: 420px; 
+  max-width: 420px;
   margin: auto;
 }
 
@@ -437,7 +443,7 @@ body {
 
 .lokasi {
   background-image: url(../Aset/Gambar/bg\ bunga\ 2.png);
-  background-size: 390px 100%;
+  background-size: 450px 100%;
   background-position: center;
   display: flex;
   flex-direction: column;
@@ -465,7 +471,7 @@ body {
 }
 
 .lokasi .maps {
-  width: 90%;
+  width: 400px;
   height: 250px;
   border: 4px solid white;
   border-radius: 20px;
@@ -633,31 +639,33 @@ body {
     }
   }
 
+  .animasiBunga {
+    position: relative;
+  }
+
   .bunga {
     position: absolute;
     width: 600px;
     pointer-events: none;
-    transform: scaleX(-1);
-    opacity: 0.3;
-    z-index: 1;
+    z-index: 2;
     animation: bunga 5s ease-in-out infinite;
   }
   .bawah {
-    bottom: 0;
-    left: 0;
+    top: 365px;
+    left: -240px;
   }
   .atas {
-    top: -15px;
-    right: -20px;
+    top: -20px;
+    right: -250px;
     width: 400px;
     animation: bunga3 5s ease-in-out infinite;
     transform-origin: top right;
   }
 
   .ranting {
-    bottom: -25px;
-    left: 10px;
-    z-index: 0;
+    top: 395px;
+    left: -270px;
+    z-index: 1;
     animation: bunga 5s ease-in-out infinite, bunga2 5s ease-in-out infinite;
   }
 
@@ -678,8 +686,8 @@ body {
   }
 
   .open {
-  padding: 1% 3%;
-}
+    padding: 1% 3%;
+  }
 
   .cover {
     background-size: contain;
@@ -710,13 +718,12 @@ body {
     height: 200px;
   }
 
-  .lokasi .rsvp{
+  .lokasi .rsvp {
     background-size: 30% 100%;
   }
-  
+
   .youtube {
     width: 360px;
     height: 315px;
   }
-
 }

@@ -492,6 +492,7 @@ body {
 .galeri {
   display: inline;
   background-color: #ac2d4f;
+  width: 100%;
 }
 
 .hadiah {
